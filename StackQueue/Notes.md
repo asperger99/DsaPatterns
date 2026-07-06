@@ -323,8 +323,8 @@ string DecodeString(string s)
 
 ### 8. Monotonic Queue — Sliding Window Minimum
 
-A deque that maintains elements in increasing order. Front = current window minimum.
-
+- A deque that maintains elements in increasing order. Front = current window minimum.
+- A simpler solution is using priorityQueue
 > LeetCode: [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/), [1438. Longest Subarray with Absolute Diff ≤ Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
 
 ```csharp
