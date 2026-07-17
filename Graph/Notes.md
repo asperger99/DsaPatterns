@@ -260,6 +260,7 @@ Final: A→A=0, A→B=1, A→C=-1, A→D=2
 (Path to C: A→B→D→C = 1+1-3 = -1, shorter than direct A→C=4)
 
 **Key insight:** each iteration "unlocks" one more hop. That's why you need n-1 iterations — the longest possible shortest path in a graph with n nodes uses at most n-1 edges.
+- Number of iterations needed depends on the edge order, but after n-1 iterations the shortest paths are guaranteed to have been found regardless of order.
 
 ---
 
@@ -299,6 +300,10 @@ for (int i = 0; i <= k; i++)
     dist = temp;
 }
 ```
+
+Rule of thumb
+- Shortest path with no edge limit: Use standard Bellman-Ford (in-place updates are fine). 
+- Shortest path with an exact/maximum number of edges: Use double buffering (temp = dist.Clone()), so each iteration only builds on results from the previous iteration.
 
 ---
 
